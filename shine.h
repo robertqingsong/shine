@@ -28,7 +28,10 @@ typedef struct CShineParam_t
 {
 	C_SHINE_TYPE eShineType;	
 	
-	CSocket *pSocket;//socket to read or write data.
+	int8_t *pShineId;//shine id.
+	
+	int8_t *pServerIP;//server ip or domain name.
+	int16u_t iServerPort;//shine server port.
 	
 	int32_t iIsReliable;//if it's Reliable data transportation.
 }CShineParam;
@@ -38,6 +41,12 @@ void *open_shine( const CShineParam *pShineParam );
 
 //close shine to release resource.
 void close_shine( void *pHandle );
+
+//open tunnel.
+int32_t open_tunnel( void *pHandle );
+
+//close tunnel.
+int32_t close_tunnel( void *pHandle, int32_t iTunnelId );
 
 //read shine data.
 int32_t read_shine_data( const void *pHandle, int8u_t *pRecvBuf, const int32_t iRecvBufSize );

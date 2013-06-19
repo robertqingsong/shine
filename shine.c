@@ -102,6 +102,22 @@ void close_shine( void *pHandle )
 	}
 }
 
+//open tunnel.
+int32_t open_tunnel( void *pHandle )
+{
+	int32_t iRetCode = -1;
+	
+	return iRetCode;	
+}
+
+//close tunnel.
+int32_t close_tunnel( void *pHandle, int32_t iTunnelId )
+{
+	int32_t iRetCode = -1;
+	
+	return iRetCode;		
+}
+
 //read shine data.
 int32_t read_shine_data( const void *pHandle, int8u_t *pRecvBuf, const int32_t iRecvBufSize )
 {
