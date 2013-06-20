@@ -111,15 +111,13 @@ typedef struct CSession_t
 					 const CSocket *pSocket, 
 				    const int8u_t *pInData, 
 				    const int32_t iInDataLen, 
-				    const CNetAddr *pNetAddr, 
-				    void *pUserData );
+				    const CNetAddr *pNetAddr );
 
 	//event.
 	int32_t (*handle_event)( const struct CSession_t *pThis, 
 				 const C_SESSION_EVENT eEvent, 
 				 const CEventParam *pEventParam, 
-				 const int32_t iEventParamSize, 
-				 void *pUserData );
+				 const int32_t iEventParamSize );
 				 
 	//session param.
 	CSessionParam stSessionParam;				 

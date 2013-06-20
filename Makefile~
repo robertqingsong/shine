@@ -17,7 +17,7 @@ $(OBJECTS):%.o:%.c
 	$(CC) $(CFLAGS) -c $(INCLUDE_DIR) $< -o $@
 
 demo:
-	$(CC) ./shine_server.c $(LDFLAGS) $(INCLUDE_DIR) -o shine_server -L./ -lshine -lkpf -lpthread
+	$(CC) ./shine_server.c $(LDFLAGS) $(INCLUDE_DIR) -o shine_server -L./ -lkpf -lpthread
 	$(CC) ./receiver.c $(LDFLAGS) $(INCLUDE_DIR) -o receiver -L./ -lshine -lkpf -lpthread
 
 clean:
