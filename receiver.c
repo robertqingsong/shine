@@ -17,7 +17,7 @@ int main( int argc, char **argv )
 {
 	void *pShineHandle = NULL;
 	CShineParam stShineParam;
-	const int8_t *pShineServerIP = "192.168.1.101";
+	const int8_t *pShineServerIP = "192.168.1.100";
 	const int16u_t iShineServerPort = 9000;
 	const int8_t *pShineId = "dsflseewfreeeeeeeeee";
 

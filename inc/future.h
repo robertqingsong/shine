@@ -8,13 +8,30 @@
 #ifndef __FUTURE_H__
 #define __FUTURE_H__
 
-#ifdef (__cplusplus)
+#include "task.h"
+
+#if defined(__cplusplus)
 extern "C"
 {
 #endif
 
+struct CFuture_t;
 
-#ifdef (__cplusplus)
+//future callback.
+typedef int32_t (*future_callback_t)( struct CFuture_t *pFuture );
+
+//future type define.
+typedef struct CFuture_t
+{
+	CMessage stMesg;
+	
+	future_callback_t future_callback;
+}CFuture;
+
+//init future.
+void init_future( void *pFuture, const future_callback_t callback );
+
+#if defined(__cplusplus)
 }
 #endif
 
